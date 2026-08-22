@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Sentinel Panel</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body { height: 100%; margin: 0; background: #101016; }
+    body { display: grid; place-items: center; overflow: hidden; }
+    .panel { width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.777vh; }
+    svg { display: block; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <main class="panel" aria-label="Original cinematic data sentinel comic panel">
+    <svg viewBox="0 0 1600 900" role="img" aria-label="A lone data sentinel in a rain-dark server alley">
+      <defs>
+        <pattern id="grain" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="4" r="1.2" fill="#f1e6cf" opacity=".18"/>
+          <circle cx="15" cy="12" r=".9" fill="#f1e6cf" opacity=".12"/>
+          <circle cx="8" cy="19" r=".8" fill="#f1e6cf" opacity=".12"/>
+        </pattern>
+        <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.4" fill="#f1e6cf" opacity=".35"/>
+        </pattern>
+        <clipPath id="rightField"><rect x="880" y="0" width="720" height="900"/></clipPath>
+      </defs>
+
+      <!-- Quiet text-safe field: intentionally low-detail and low-contrast. -->
+      <rect width="1600" height="900" fill="#101016"/>
+      <rect width="900" height="900" fill="#15151c"/>
+      <rect width="1600" height="900" fill="url(#grain)" opacity=".55"/>
+
+      <!-- Server alley perspective, kept to the right of the text-safe field. -->
+      <g clip-path="url(#rightField)" fill="none" stroke="#f1e6cf" stroke-linecap="square">
+        <path d="M900 0 L1090 900 M1030 0 L1210 900 M1180 0 L1330 900" stroke-width="8" opacity=".22"/>
+        <path d="M1600 90 L1030 450 L1600 790" stroke="#77214a" stroke-width="12" opacity=".72"/>
+        <path d="M1600 180 L1115 450 L1600 700" stroke="#f1e6cf" stroke-width="4" opacity=".42"/>
+        <path d="M940 760 L1600 610 M980 840 L1600 720" stroke="#9acb27" stroke-width="6" opacity=".55"/>
+      </g>
+
+      <!-- Collapsing scraper/data shards. -->
+      <g clip-path="url(#rightField)" stroke="#101016" stroke-width="8" stroke-linejoin="miter">
+        <path d="M1000 160 L1090 105 L1072 270 L1018 310 Z" fill="#9acb27"/>
+        <path d="M1110 115 L1185 55 L1200 215 L1145 268 Z" fill="#f05b3b"/>
+        <path d="M1240 100 L1310 20 L1340 200 L1270 250 Z" fill="#77214a"/>
+        <path d="M1400 95 L1470 30 L1518 160 L1445 235 Z" fill="#f1e6cf"/>
+        <path d="M980 480 L1060 390 L1108 510 L1030 580 Z" fill="#f1e6cf"/>
+        <path d="M1125 360 L1200 300 L1240 430 L1165 490 Z" fill="#9acb27"/>
+        <path d="M1310 350 L1395 285 L1422 430 L1340 500 Z" fill="#f05b3b"/>
+        <path d="M1450 420 L1540 330 L1590 460 L1500 555 Z" fill="#77214a"/>
+        <path d="M1000 720 L1080 640 L1130 780 L1050 850 Z" fill="#77214a"/>
+        <path d="M1190 690 L1260 600 L1320 730 L1240 825 Z" fill="#f05b3b"/>
+        <path d="M1400 700 L1485 595 L1570 740 L1490 835 Z" fill="#9acb27"/>
+      </g>
+
+      <!-- Sharp diagonal action lines. -->
+      <g clip-path="url(#rightField)" fill="none" stroke-linecap="square">
+        <path d="M870 420 L1190 120 M900 500 L1280 150 M920 600 L1390 180" stroke="#f1e6cf" stroke-width="10" opacity=".86"/>
+        <path d="M1020 590 L1490 180 M1110 680 L1580 260 M1180 780 L1600 410" stroke="#f05b3b" stroke-width="7" opacity=".8"/>
+        <path d="M1020 260 L1510 70 M1060 300 L1580 120" stroke="#9acb27" stroke-width="5" opacity=".9"/>
+      </g>
+
+      <!-- Sentinel silhouette and coat. -->
+      <g stroke="#101016" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+        <!-- rear leg -->
+        <path d="M1265 740 L1342 742 L1378 870 L1304 870 Z" fill="#77214a"/>
+        <!-- forward leg -->
+        <path d="M1185 716 L1272 723 L1250 875 L1164 875 Z" fill="#f1e6cf"/>
+        <path d="M1156 864 L1263 864 L1272 889 L1140 889 Z" fill="#101016"/>
+        <path d="M1290 860 L1390 860 L1412 888 L1280 888 Z" fill="#101016"/>
+        <!-- cropped jacket -->
+        <path d="M1120 335 L1230 295 L1330 365 L1370 575 L1270 650 L1130 590 L1075 445 Z" fill="#101016"/>
+        <path d="M1120 350 L1190 310 L1180 570 L1100 530 Z" fill="#f05b3b"/>
+        <path d="M1280 360 L1320 390 L1348 555 L1270 610 Z" fill="#f1e6cf"/>
+        <!-- neck and scarf -->
+        <path d="M1195 275 L1260 270 L1280 350 L1205 360 Z" fill="#f1e6cf"/>
+        <path d="M1172 315 L1260 300 L1335 342 L1298 384 L1210 350 L1150 390 L1125 350 Z" fill="#9acb27"/>
+        <path d="M1270 330 L1380 280 L1400 322 L1308 390 Z" fill="#9acb27"/>
+        <!-- head -->
+        <path d="M1150 165 L1240 120 L1325 175 L1300 295 L1215 330 L1140 270 Z" fill="#f1e6cf"/>
+        <!-- asymmetric hair -->
+        <path d="M1135 175 L1182 95 L1240 75 L1320 135 L1295 210 L1260 170 L1218 220 L1165 250 Z" fill="#101016"/>
+        <path d="M1260 115 L1348 155 L1305 225 L1280 190 Z" fill="#101016"/>
+        <!-- square visor -->
+        <path d="M1162 188 L1285 174 L1300 242 L1175 255 Z" fill="#77214a"/>
+        <path d="M1175 188 L1285 176 L1290 210 L1170 222 Z" fill="#9acb27"/>
+        <path d="M1200 195 L1212 215 M1240 190 L1252 210" stroke="#101016" stroke-width="6"/>
+        <!-- arm holding laptop -->
+        <path d="M1150 400 L1040 520 L1090 560 L1230 455 Z" fill="#f1e6cf"/>
+        <path d="M1068 520 L1110 560 L1060 610 L1015 565 Z" fill="#9acb27"/>
+        <!-- torn laptop -->
+        <path d="M950 500 L1110 455 L1160 625 L980 660 Z" fill="#f1e6cf"/>
+        <path d="M970 520 L1090 488 L1125 600 L995 625 Z" fill="#101016"/>
+        <path d="M990 545 L1030 532 L1042 575 L1002 588 Z M1050 525 L1090 515 L1100 555 L1060 565 Z M1015 596 L1065 582 L1075 610 L1025 620 Z" fill="#9acb27" stroke="none"/>
+        <path d="M962 648 L1135 610 L1162 642 L980 690 Z" fill="#77214a"/>
+        <path d="M1010 500 L1040 472 L1060 505" fill="none" stroke="#f05b3b"/>
+      </g>
+
+      <!-- Repair drone. -->
+      <g stroke="#101016" stroke-width="12" stroke-linejoin="miter">
+        <path d="M1370 235 L1470 160 L1540 220 L1462 310 L1378 290 Z" fill="#f1e6cf"/>
+        <path d="M1395 235 L1468 190 L1510 224 L1455 276 Z" fill="#101016"/>
+        <circle cx="1457" cy="234" r="22" fill="#77214a"/>
+        <circle cx="1457" cy="234" r="8" fill="#9acb27" stroke="none"/>
+        <path d="M1380 252 L1330 218 L1350 285 L1402 272 Z" fill="#f05b3b"/>
+        <path d="M1490 192 L1528 145 L1530 225 Z" fill="#9acb27"/>
+      </g>
+
+      <!-- Foreground rain cuts and panel edge. -->
+      <g stroke="#f1e6cf" stroke-width="4" opacity=".7">
+        <path d="M930 80 L910 170 M1010 60 L990 150 M1510 500 L1490 590 M1570 530 L1550 620"/>
+      </g>
+      <rect x="10" y="10" width="1580" height="880" fill="none" stroke="#f1e6cf" stroke-width="10" opacity=".9"/>
+    </svg>
+  </main>
+</body>
+</html>
